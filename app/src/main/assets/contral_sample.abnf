@@ -1,0 +1,10 @@
+#ABNF 1.0 gb2312;
+language zh-CN; 
+mode voice;
+
+root $main;
+$main = $control1 | $control2;
+$control1= 启动 | 停止 | 锁定 | 解锁 | 静音 | 取消静音 | 帮助;
+$control2 = $place1 $place2;
+$place1 = 打开 | 关闭;
+$place2 = A模式 | B模式 | C模式 | D模式;
